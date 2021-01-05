@@ -17,17 +17,18 @@ custom:
     prod: 1
     default: 1
   tableThroughput: ${self:custom.tableThroughputs.${self:custom.stage}, self:custom.tableThroughputs.default}
+  serverless-offline:
+    port: 4000
   bundle:
     linting: false
 
-
 provider:
   name: aws
-  # runtime: nodejs12.x
-  runtime: nodejs10.x
+  runtime: nodejs12.x
+  # runtime: nodejs10.x
   stage: dev
   region: us-east-1
-  profile: personalAccount
+  # profile: personalAccount
   environment:
     BookingsDB: ${self:custom.BookingsDB}
     ListingsDB: ${self:custom.ListingsDB}
@@ -72,3 +73,4 @@ functions:
 resources:
   - ${file(resources/listing-db.yml)}
   - ${file(resources/bookingDB.yml)}
+  
