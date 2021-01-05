@@ -1,66 +1,59 @@
-<h1 align="center">
-    <img  alt="serverless start"  src="https://github.com/pimp-my-book/serverless-graphql-nodejs-starter/blob/master/serverless-starter.png">
- </h1>
+# Lunar Tour API 🌟
 
-# Serverless GraphQL NodeJS Starter ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
+Welcome to the Lunar Tour API that is part of [Fullstack Serverless GraphQL](https://fullstack-serverless-graphql.netlify.com/), which teaches you how to build Serverless GraphQL APIs. This API allows users to make bookings to lunar destinations, as well as view lunar holiday activies.
 
-This is a basic boilerplate to kitstart your Serverless GraphQL projects with AWS Lambda. There is also a [TypeScript version](https://github.com/AmoDinho/serverless-graphql-typescript-starter/blob/master/README.md) if you prefer!
+The stack for this API is as follows:
 
-It is powered by [`Apollo-Server-Lambda`](https://github.com/apollographql/apollo-server/tree/master/packages/apollo-server-lambda) and uses the [Serverless Framework](https://serverless.com/) to deploy it to AWS.
+🌟 [AWS Lambda](https://aws.amazon.com/lambda/)
 
-This is hugely inspired by the starter that [Anomaly Innovations](https://github.com/AnomalyInnovations/serverless-nodejs-starter) created. The project was cloned from it.
+🌟 [DynamoDB](https://aws.amazon.com/dynamodb/)
 
-## Prerequistes
+🌟 [Serverless Framework](https://www.serverless.com/)
 
-- [An AWS Account](https://aws.amazon.com/)
-- [A configured AWS CLI](https://serverless.com/framework/docs/providers/aws/guide/credentials/)
-- [Serverless Framework installed on your machine](https://serverless.com/framework/docs/providers/aws/guide/installation/)
-- [NodeJS](nodejs.org)
+🌟 [Apollo Lambda Server](https://www.apollographql.com/docs/apollo-server/)
 
-Note this project uses [Yarn](https://yarnpkg.com).
+What you need to use this Repo:
 
-## How to get started
+🧁 An AWS Account
+
+🧁 Serverless Framework
+
+🧁 NodeJS v12.x or above
+
+## Installation steps
 
 First clone the repo:
 
-```
-$ serverless install --url https://github.com/pimp-my-book/serverless-graphql-nodejs-starter --name project-name
-```
-
-Move into the project folder:
-
-```
-$ cd project-name
+```bash
+git clone https://github.com/Fullstack-Serverless-GraphQL/lunar-tour-api
 ```
 
-Then Install all its dependancies:
+Then cd into the directory of the project:
 
-```
-$ yarn install
-```
-
-Then you should be able to invoke the Lambda locally:
-
-```
-$ yarn offline
+```bash
+cd lunar-tour-api
 ```
 
-To deploy to AWS run the following command:
+Once you're in then install the packages using your fav package manager:
 
+```bash
+yarn install
 ```
-$ yarn deploy
+
+Now you can open playground on `localhost://4000` :
+
+```bash
+sls offline
 ```
 
-This should be a good start to be able to move on and do whatever you gotta do meet business requirements.
+You should be able to run queries and mutations against the API locally now.
 
-### How To Link Other AWS Services
+This project was scaffolded using the [Serverless NodeJS GraphQL Starter](https://github.com/pimp-my-book/serverless-graphql-nodejs-starter)
 
-There are also Cloudformation templates for DynamoDB,S3,Cognito and SQS.
+## Links to related projects
 
-## Contributing
+🦚 [Lunar Tour (Vue)](https://github.com/Fullstack-Serverless-GraphQL/lunar-tour-frontend)
 
-Contributions are most welcome!!
+🦚 [Lunar Tour (React)](https://github.com/Fullstack-Serverless-GraphQL/lunar-tour-react)
 
-## License
-
-MIT
+🦚 [Fullstack Serverless GraphQL docs](https://github.com/Fullstack-Serverless-GraphQL/fullstack-serverless-graphql-docs)

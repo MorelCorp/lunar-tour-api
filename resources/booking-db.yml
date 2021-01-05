@@ -1,5 +1,5 @@
 Resources:
- BookingsDB:
+  BookingsDB:
     Type: AWS::DynamoDB::Table
     Properties:
       TableName: ${self:custom.BookingsDB}
@@ -8,7 +8,6 @@ Resources:
           AttributeType: S
         - AttributeName: listingId
           AttributeType: S
-
 
       KeySchema:
         - AttributeName: bookingId

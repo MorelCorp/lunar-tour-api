@@ -7,7 +7,8 @@ plugins:
   - serverless-offline
   - serverless-dotenv-plugin
 
-
+# serverless-webpack configuration
+# Enable auto-packing of external modules
 custom:
   stage: ${opt:stage, self:provider.stage}
   region: ${opt:region, self:provider.region}
@@ -25,13 +26,12 @@ custom:
 provider:
   name: aws
   runtime: nodejs12.x
-  # runtime: nodejs10.x
   stage: dev
   region: us-east-1
-  # profile: personalAccount
   environment:
     BookingsDB: ${self:custom.BookingsDB}
     ListingsDB: ${self:custom.ListingsDB}
+    stripeSecretKey: ${env:STRIPE_SECRET_KEY}
 
   iamRoleStatements:
     - Effect: Allow
