@@ -11,8 +11,8 @@ plugins:
 custom:
   stage: ${opt:stage, self:provider.stage}
   region: ${opt:region, self:provider.region}
-  ListingsDB: ${self:custom.stage}-listings
-  BookingsDB: ${self:custom.stage}-bookings
+  ListingsDB: ${self:custom.stage}-lunar-listings
+  BookingsDB: ${self:custom.stage}-lunar-bookings
   tableThroughputs:
     prod: 1
     default: 1
@@ -23,10 +23,10 @@ custom:
 
 provider:
   name: aws
-  runtime: nodejs12.x
-  # runtime: nodejs10.x
-  region: us-east-1
+  # runtime: nodejs12.x
+  runtime: nodejs10.x
   stage: dev
+  region: us-east-1
   profile: personalAccount
   environment:
     BookingsDB: ${self:custom.BookingsDB}
