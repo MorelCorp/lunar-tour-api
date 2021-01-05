@@ -32,9 +32,6 @@ provider:
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
 
-      Resource:
-        - "Fn::GetAtt": [TableDB, Arn]
-
 functions:
   graphql:
     handler: src/graphql.graphqlHandler
